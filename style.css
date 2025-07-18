@@ -26,7 +26,7 @@
   margin-top: 10px;
 }
 
-main{
+main, footer{
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -96,7 +96,7 @@ main > section{
   width: 100%;
 }
 
-/* team and feature related style */
+/* team related style */
 .teams-img-container{
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -112,6 +112,43 @@ main > section{
 .teams{
   align-items: center;
 }
+
+/* feature */
+#feature-section-title{
+  border-left: 5px #FF900E solid;
+  padding: 20px;
+}
+.feature-card .featute-title{
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.feature-card{
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 30px 0 rgba(0,0,0,0.06);
+}
+.feature{
+  gap: 100px;
+  align-items: center;
+}
+#ex-badge{
+  padding: 35px 32px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -60px;
+  margin-top: -100px;
+}
+#ex-year{
+  font-size: 3rem;
+  font-weight: 700;
+}
+/* .feature-items, .feature-architect{
+  max-width: 50%;
+} */
+
 
 /* some fact style */
 .fact-card{
@@ -151,14 +188,24 @@ main > section{
 .sponsor-company{
   display: grid;
   grid-template-columns: repeat(5,1fr);
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
 }
 .sponsor-company img{
   filter: grayscale(100%);
 }
 
+/* footer */
+footer p{
+  text-align: center;
+  padding: 20px;
+  margin: 100px 0;
+}
+
 /* responsive media query */
 @media screen and (max-width: 576px) {
-    .nav-link, .navbar, .teams{
+    .nav-link, .navbar, .teams, .feature{
       flex-direction: column;
     }
     .teams-img-container, .facts-container, .sponsor-company{
@@ -175,11 +222,19 @@ main > section{
     .our-feature{
       margin-left: 20px;
     }
+    #ex-badge{
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .feature-architect img{
+  max-width: 100%;
+}
+
 }
 
 /* medium device */
 @media screen and (min-width:576px) and (max-width:992px) {
-  .teams{
+  .teams, .feature{
     flex-direction: column;
   }
   .our-feature{
@@ -190,4 +245,5 @@ main > section{
     gap: 50px;
     justify-items: center;
   }
+
 }
